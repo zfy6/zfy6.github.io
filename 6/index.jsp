@@ -143,35 +143,7 @@
 
         });
 
-            var http = new XMLHttpRequest();
-            http.open("get", "IndexServlet", true);
-            http.send();
 
-        var  login = document.querySelector("#login");
-        login.addEventListener("click",function () {
-            alert("你还没有登录，请先登陆吧！");
-        })
-        // $.ajax({
-        //     url: "IndexServlet",
-        //     type: "get",
-        //     dataType: "json",
-        //     success: function(data){
-        //         /*这个方法里是ajax发送请求成功之后执行的代码*/
-        //         showData(data);
-        //                },
-        //     error: function(msg){
-        //         alert("ajax连接异常："+msg);
-        //           }
-        // });
-
-
-        // function showData(data) {
-        //     var str ="";
-        //     for (var i =0;i<data.length;i++) {
-        //         str = "<tr><td><img src='/goodsimg/"+data[i].g_uri+"'></td><td>"+data[i].g_name+"</td><td>"+data[i].g_price+"</td><td><a href='#'>加入购物车</a></td></tr>";
-        //         table.append(str);
-        //     }
-        // }
     }
 
 
