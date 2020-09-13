@@ -1,8 +1,8 @@
 html{
-    cursor: url("/images/pk.ico"),auto;
+    cursor: url("../images/pk.ico"),auto;
 }
 a:hover{
-    cursor: url("/images/pk1.ico"),auto;
+    cursor: url("../images/pk1.ico"),auto;
 }
 body {
     background: linear-gradient(45deg, rgba(69, 215, 235, 0.2), rgba(100, 202, 233, 0.2));
