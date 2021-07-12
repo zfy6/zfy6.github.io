@@ -1,0 +1,302 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-image: url(../images/bg.jpg);
+    background-size: cover;
+}
+
+#app {
+    width: 1000px;
+    height: 700px;
+    margin: 50px auto;
+    border: 2px solid rgba(53, 92, 200, 0.534);
+    background-color: rgb(240, 231, 231);
+    border-radius: 10px;
+    box-shadow: 0 0 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.icon-xiaoemo {
+    font-size: 100px;
+    margin-left: -10px;
+    position: absolute;
+    top: -8px;
+}
+
+.xiaoemo {
+    width: 80px;
+    height: 90px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    position: relative;
+    color: red;
+}
+
+.xiaoemo-name {
+    position: absolute;
+    left: 7px;
+    top: -30px;
+    color: red;
+}
+
+.xiaoemo-blood {
+    position: absolute;
+    left: -10px;
+    top: -10px;
+    width: 100px;
+    height: 10px;
+    border: 1px solid black;
+
+
+}
+
+.xiaoemo-blood-bar {
+    width: 50%;
+    height: 100%;
+    background-color: rgb(230, 34, 34);
+}
+
+.icon-ranhu {
+    position: absolute;
+    bottom: 0;
+    left: 30px;
+    opacity: 0;
+}
+
+@keyframes ranhu1 {
+    0% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-50px, 80px);
+        font-size: 50px;
+    }
+
+}
+
+@keyframes ranhu2 {
+    0% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-150px, 80px);
+        font-size: 50px;
+    }
+
+}
+
+@keyframes ranhu3 {
+    0% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(150px, 80px);
+        font-size: 50px;
+    }
+
+}
+
+@keyframes ranhu4 {
+    0% {
+        transform: translateY(0px);
+        opacity: 0.5;
+    }
+
+    20% {
+        transform: translateY(20px);
+        font-size: 30px;
+    }
+
+    40% {
+        transform: translateX(-50px);
+        font-size: 40px;
+    }
+
+    60% {
+        transform: translateX(50px);
+        font-size: 40px;
+        opacity: 1;
+    }
+
+    80% {
+        transform: translate(-50px, 20px);
+        opacity: 0.9;
+    }
+
+    100% {
+        transform: translate(50px, 80px);
+        font-size: 10px;
+        opacity: 0;
+    }
+
+}
+@keyframes ranhu5 {
+    0% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(50px, -80px);
+        font-size: 50px;
+    }
+
+}
+
+@keyframes ranhu6 {
+    0% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(150px, -80px);
+        font-size: 50px;
+    }
+
+}
+
+@keyframes ranhu7 {
+    0% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-150px, -80px);
+        font-size: 50px;
+    }
+
+}
+
+@keyframes ranhu8 {
+    0% {
+        transform: translateY(0px);
+        opacity: 0.5;
+    }
+
+    20% {
+        transform: translateY(-20px);
+        font-size: 30px;
+    }
+
+    40% {
+        transform: translateX(50px);
+        font-size: 40px;
+    }
+
+    60% {
+        transform: translateX(-80px);
+        font-size: 40px;
+        opacity: 1;
+    }
+
+    80% {
+        transform: translate(50px, -150px);
+        opacity: 0.9;
+    }
+
+    100% {
+        transform: translate(-50px, -180px);
+        font-size: 10px;
+        opacity: 0;
+    }
+
+}
+
+.player {
+    width: 53px;
+    height: 55px;
+    position: absolute;
+    left: 15px;
+    top: 450px;
+    position: relative;
+}
+
+.player-name {
+    position: absolute;
+    left: 5px;
+    top: -35px;
+}
+
+.player-blood {
+    position: absolute;
+    left: -10px;
+    top: -13px;
+    width: 70px;
+    height: 10px;
+    border: 1px solid black;
+
+
+}
+
+.player-blood-bar {
+    width: 50%;
+    height: 100%;
+    background-color: rgb(8, 240, 97);
+}
+
+.icon-ren {
+    font-size: 50px;
+    position: absolute;
+}
+
+.icon-jian {
+    font-size: 50px;
+    position: absolute;
+    right: -25px;
+    top: -20px;
+    transform-origin: left bottom;
+    animation: none;
+    display: none;
+}
+
+.jian2 {
+    top: -30px;
+    left: 20px;
+    transform: rotate(180deg);
+    animation: none;
+    display: none;
+    transform: rotate(-90deg);   
+}
+
+@keyframes swordATK {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(-30deg);
+    }
+
+    100% {
+        transform: rotate(40deg);
+    }
+}
+
+@keyframes sword2ATK {
+    0% {
+        transform: rotate(-90deg);
+    }
+
+    50% {
+        transform: rotate(-70deg);
+    }
+
+    100% {
+        transform: rotate(-160deg);
+    }
+}

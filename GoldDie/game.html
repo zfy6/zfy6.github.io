@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>game</title>
+</head>
+
+<body>
+
+    <!-- 
+
+        创建场景
+        创建对象3 个人
+        初始化
+
+     -->
+    <style>
+        .main {
+            width: 1000px;
+            height: 500px;
+            background: #ccc;
+            position: relative;
+        }
+
+        .person {
+            width: 40px;
+            height: 80px;
+            border: 1px #000 solid;
+            background: #f60;
+            position: absolute;
+            bottom: 0;
+            left: 100px;
+        }
+
+        .person .blod {
+            width: 80px;
+            height: 10px;
+            border: 1px #000 solid;
+            position: absolute;
+            top: -20px;
+            left: -20px;
+
+        }
+
+        .person .blod .bar {
+            width: 30%;
+            height: 10px;
+            background: #090;
+        }
+
+        .skill {
+            position: absolute;
+            width: 0px;
+            height: 0px;
+            border: 10px #009 solid;
+            border-color: #009 transparent transparent transparent;
+            animation: arrowmove .2s infinite;
+        }
+
+        .v8 {
+            border-radius: 20px;
+        }
+
+        .v8 .blod {
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .v8 .idname {
+            font-size: 12px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        @keyframes arrowmove {
+            0% {
+                transform: rotate(0);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    <div id="main" class="main">
+
+        <!-- <div class="person v8">
+            <div class="blod">
+                <div class="bar"></div>
+            </div>
+            <div class="idname">名字</div>
+            <div class="skill"></div>
+        </div> -->
+
+    </div>
+    <script>
+        var main = document.querySelector("#main");
+
+
+        function Person(opt) {
+
+            //默认值
+            this.skin = "person";
+            this.blood = 100;
+            this.x = 50;
+            this.idname = "靓仔";
+            this.skillBlood = 20;
+            this.skillDistance = 100;
+            this.skillX = 0;
+            this.body = "";
+            this.armor = 10;
+            let _this = this;
+            let skillTimer;
+
+            //替换参数
+            if (opt) {
+                if (opt.skin) this.skin = "person " + opt.skin;
+                if (opt.blood) this.blood = opt.blood;
+                if (opt.x) this.x = opt.x;
+                if (opt.idname) this.idname = opt.idname;
+                if (opt.armor) this.armor = opt.armor;
+            }
+
+            //创建对象
+            this.create = function () {
+                //身体
+                _this.body = document.createElement("div");
+                _this.body.className = _this.skin;
+                _this.body.style.left = _this.x + "px";
+
+                //血条
+                _this.bloodDOM = document.createElement("div");
+                _this.bloodDOM.className = "blod";
+
+                //血量
+                _this.bloodBarDOM = document.createElement("div");
+                _this.bloodBarDOM.className = "bar";
+                _this.bloodBarDOM.style.width = _this.blood + "%";
+
+                //用户名
+                _this.idNameDOM = document.createElement("div");
+                _this.idNameDOM.className = "idname";
+                _this.idNameDOM.innerHTML = _this.idname;
+
+                //技能
+                _this.skillDOM = document.createElement("div");
+                _this.skillDOM.className = "skill";
+
+                _this.bloodDOM.appendChild(_this.bloodBarDOM);
+                _this.body.appendChild(_this.idNameDOM);
+                _this.body.appendChild(_this.bloodDOM);
+                _this.body.appendChild(_this.skillDOM);
+
+                main.appendChild(_this.body);
+
+            }
+
+            //减血
+            this.downBlood = function (value) {
+
+                _this.blood = _this.blood - value * (_this.armor / 1);
+
+                if (_this.blood <= 0) {
+                    _this.body.remove();
+                }
+                // console.log(_this.blood);
+                _this.bloodBarDOM.style.width = _this.blood + "%";
+
+                //连接网络，传输数据
+
+            }
+
+            //技能配置
+            this.changekill = function (key) {
+                //A
+                if (key == 65) {
+                    _this.skillBlood = 200;
+                    this.skillDistance = 1000;
+                }
+                //S
+                if (key == 83) {
+                    _this.skillBlood = 10;
+                    this.skillDistance = 2000;
+                }
+                //D
+                if (key == 68) {
+                    _this.skillBlood = 100;
+                    this.skillDistance = 9000;
+                }
+
+                skillTimer = setInterval(() => {
+                    _this.skillX += 20;
+                    if (_this.skillX > 200) {
+                        _this.skillX = 0;
+                        clearInterval(skillTimer);
+                    }
+                    _this.skillDOM.style.left = _this.skillX + "px";
+                }, 50);
+
+
+            }
+
+            this.create();
+
+        }
+
+        // Person.prototype.upBlood = function(){
+
+        // }
+
+
+        //实例化主角
+        let me = new Person({
+            // "idname": "BOSS",
+            // "x": 100,
+            // "blood": 70,
+            // "skin": "v8"
+        });
+
+
+        //实例化其他
+        let monster = [];
+        for (let i = 0; i < 2; i++) {
+            let x = (100 + Math.random() * 500);
+            let armor = Math.random() * 100;
+            monster[i] = new Person({
+                "idname": "wang" + i,
+                "x": x,
+                "blood": 100,
+                "armor": armor,
+            });
+        }
+
+
+
+        //监听
+        window.onkeyup = function (e) {
+            console.log(e);
+
+            //右
+            if (e.keyCode == 39) {
+                me.x += 20;
+                me.body.style.left = me.x + "px";
+            }
+            //左
+            if (e.keyCode == 37) {
+                me.x -= 20;
+                me.body.style.left = me.x + "px";
+            }
+
+            //ASD
+            if (e.keyCode == 65 || e.keyCode == 83 || e.keyCode == 68) {
+
+                //根据按键更改技能参数
+                me.changekill(e.keyCode);
+
+                //发技能
+                for (let i = 0; i < monster.length; i++) {
+
+                    //判断距离
+                    if (Math.abs(me.body.offsetLeft - monster[i].body.offsetLeft) <= me.skillDistance) {
+                        monster[i].downBlood(me.skillBlood);
+                    }
+
+                }
+
+
+            }
+
+        }
+    </script>
+
+
+</body>
+
+</html>

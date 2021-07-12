@@ -1,0 +1,51 @@
+{
+  "id": "2664663",
+  "name": "GoldDie",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "4411806",
+      "name": "小恶魔",
+      "font_class": "xiaoemo",
+      "unicode": "e693",
+      "unicode_decimal": 59027
+    },
+    {
+      "icon_id": "10132237",
+      "name": "恶魔",
+      "font_class": "demon",
+      "unicode": "e7ea",
+      "unicode_decimal": 59370
+    },
+    {
+      "icon_id": "11982286",
+      "name": "坏笑恶魔",
+      "font_class": "huaixiaoemo",
+      "unicode": "e62e",
+      "unicode_decimal": 58926
+    },
+    {
+      "icon_id": "13603096",
+      "name": "燃弧",
+      "font_class": "ranhu",
+      "unicode": "e62f",
+      "unicode_decimal": 58927
+    },
+    {
+      "icon_id": "15713518",
+      "name": "人",
+      "font_class": "ren",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "18811212",
+      "name": "剑",
+      "font_class": "jian",
+      "unicode": "e63e",
+      "unicode_decimal": 58942
+    }
+  ]
+}
