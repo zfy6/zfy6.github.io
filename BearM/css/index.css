@@ -131,5 +131,11 @@ main .list-img .text {
     top: 0.74rem;
     padding-left: 0.51rem;
     padding-top: 0.16rem;
-    white-space: nowrap ;
+    white-space: nowrap;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+main .list-img>li:hover .text {
+    opacity: 1;
 }
