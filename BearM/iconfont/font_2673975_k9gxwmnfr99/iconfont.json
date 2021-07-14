@@ -1,0 +1,44 @@
+{
+  "id": "2673975",
+  "name": "熊管家M",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "21481635",
+      "name": "更多",
+      "font_class": "gengduo",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "1525316",
+      "name": "房子",
+      "font_class": "fangzi",
+      "unicode": "e636",
+      "unicode_decimal": 58934
+    },
+    {
+      "icon_id": "5420560",
+      "name": "邮箱",
+      "font_class": "youxiang",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "12157169",
+      "name": "圈电话",
+      "font_class": "quandianhua",
+      "unicode": "e628",
+      "unicode_decimal": 58920
+    },
+    {
+      "icon_id": "15710892",
+      "name": "定位 位置 ",
+      "font_class": "dingweiweizhi",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    }
+  ]
+}

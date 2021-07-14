@@ -1,0 +1,346 @@
+/* 通用样式 */
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+}
+
+.omit {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* 媒体查询 */
+@media screen and (max-width:1366px) {
+    html {
+        font-size: 182px;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    html {
+        font-size: 137px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    html {
+        font-size: 102px;
+    }
+}
+
+@media screen and (max-width:414px) {
+    html {
+        font-size: 55px;
+    }
+}
+
+@media screen and (max-width:375px) {
+    html {
+        font-size: 50px;
+    }
+}
+
+/* 头部样式 */
+header {
+    width: 100%;
+    display: flex;
+    z-index: 2;
+    justify-content: space-between;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 0.18rem;
+}
+
+header .logo {
+    width: 1.9rem;
+    height: 0.58rem;
+    background-image: url(../imges/img/logo.png);
+    background-size: cover;
+    background-position: left top;
+}
+
+header .logo a {
+    width: 100%;
+    height: 100%;
+}
+
+header .icon-gengduo {
+    font-size: 0.28rem;
+    margin: 0.15rem 0.18rem;
+    position: relative;
+    z-index: 5;
+}
+
+header .icon-gengduo:hover .nav,
+header .icon-gengduo:hover .cha {
+    display: block;
+}
+
+header .cha {
+    display: none;
+    position: absolute;
+    top: -0.05rem;
+    right: -0.06rem;
+    z-index: 2;
+    width: 0.41rem;
+    height: 0.41rem;
+    background-image: url(../imges/img/close.png);
+    background-size: cover;
+}
+
+
+/* 侧边菜单 */
+header .nav {
+    display: none;
+    position: absolute;
+    top: -0.32rem;
+    right: -0.36rem;
+    z-index: 1;
+    width: 3.48rem;
+    height: 100vh;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+header .nav li:first-child {
+    margin-top: 1.42rem;
+}
+
+header .nav li {
+    margin-top: 0.42rem;
+    line-height: 0.52rem;
+}
+
+header .nav li .active {
+    color: #14916a;
+    background-color: #fff;
+}
+
+header .nav a {
+    font-size: 0.28rem;
+    width: 2.72rem;
+    height: 0.52rem;
+    color: #fff;
+    margin-left: 0.41rem;
+    padding-left: 0.42rem;
+    border-radius: 0.2rem 0 0.2rem 0;
+}
+
+/* banner图 */
+.banner {
+    display: block;
+    width: 100%;
+}
+
+
+/* 脚部 */
+footer {
+    width: 100%;
+}
+
+footer .f-top {
+    width: 100%;
+    background-color: #f3f3f3;
+    overflow: hidden;
+}
+
+footer .f-logo {
+    width: 2rem;
+    height: 0.58rem;
+    background-image: url(../imges/img/logo-buttom.png);
+    background-size: cover;
+    margin: auto;
+    margin-top: 0.49rem;
+}
+
+footer .f-logo a {
+    width: 100%;
+    height: 100%;
+}
+
+footer .phone {
+    width: 4.47rem;
+    height: 0.68rem;
+    border: 1px solid rgba(97, 97, 97, 0.4);
+    color: #14916a;
+    font-size: 0.24rem;
+    margin: auto;
+    margin-top: 0.17rem;
+    text-align: center;
+    line-height: 0.48rem;
+    position: relative;
+    z-index: 1;
+}
+
+footer .phone .white-line {
+    width: 1px;
+    height: 0.31rem;
+    background-color: #f3f3f3;
+    position: absolute;
+    top: 0.16rem;
+}
+
+footer .phone .line1 {
+    left: -1px;
+}
+
+footer .phone .line2 {
+    right: -1px;
+}
+
+footer .phone .phone-img {
+    width: 0.33rem;
+    height: 0.33rem;
+    vertical-align: text-bottom;
+    margin-right: 0.05rem;
+}
+
+footer .phone p {
+    margin: auto;
+    margin-top: 0.1rem;
+    width: 3.9rem;
+}
+
+
+footer .f-list {
+    margin-top: 0.4rem;
+    font-size: 0.24rem;
+    color: #555555;
+    margin-left: 0.2rem;
+    margin-bottom: 0.48rem;
+}
+
+footer .f-list tr {
+    height: 0.5rem;
+    line-height: 0.5rem;
+    margin-bottom: 0.84rem;
+}
+
+footer .f-list tr img {
+    display: block;
+    margin: auto;
+}
+
+
+footer .f-list .word {
+    display: block;
+    width: 5.46rem;
+    margin-left: 0.1rem;
+}
+
+footer .f-list .icon-dianhua {
+    display: inline-block;
+    width: 0.16rem;
+    height: 0.16rem;
+    font-size: 0.16rem;
+    border: 1px solid rgba(0, 0, 0, 0.322);
+    border-radius: 50%;
+    line-height: 0.17rem;
+    transform: rotate(65deg);
+    padding-left: 2px;
+}
+
+
+footer .f-mid {
+    width: 100%;
+    background-color: #fcfcfc;
+    overflow: hidden;
+
+}
+
+footer .f-mid>div:first-child {
+    margin-top: 0.36rem;
+    text-align: center;
+    font-size: 0.28rem;
+    color: #000000;
+}
+
+footer .f-mid .f-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 5.9rem;
+    margin: auto;
+    margin-top: 0.4rem;
+}
+
+footer .f-nav>li {
+    text-align: center;
+    width: 20%;
+    font-size: 0.24rem;
+    color: #555;
+    margin-bottom: 0.3rem;
+}
+
+footer .f-nav>li>a {
+    color: #555;
+}
+
+footer .slogan {
+    width: 4.8rem;
+    height: 0.66rem;
+    background-image: url(../imges/img/footer.png);
+    background-size: cover;
+    margin: auto;
+    margin-top: 0.18rem;
+    margin-bottom: 0.25rem;
+}
+
+footer .f-bottom {
+    overflow: hidden;
+    width: 100%;
+    background-color: #f3f3f3;
+}
+
+footer .f-bottom>div:first-child {
+    margin-top: 0.38rem;
+    text-align: center;
+    font-size: 0.28rem;
+    color: #000000;
+}
+
+footer .f-bottom .f-login {
+    padding: 0.42rem 0.6rem 0.54rem 0.95rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+footer  .f-login>li:first-child{
+    margin-left: 0.15rem;
+}
+
+footer .f-bottom div:last-child {
+    margin-bottom: 0.26rem;
+}
+
+footer .f-bottom div:last-child a {
+    text-align: center;
+    color: #14916a;
+    font-size: 0.28rem;
+}
+
+footer .f-copy {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #f3f3f3;
+    padding: 0.27rem 0.1rem 0.32rem 0;
+    text-align: center;
+    font-size: 0.24rem;
+}
+
+footer .f-copy .space {
+    margin-left: 0.17rem;
+}
