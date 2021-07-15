@@ -10,27 +10,6 @@ main .m-top {
     margin-top: 0.51rem;
 }
 
-main .title {
-    text-align: center;
-}
-
-main .title>div:first-child {
-    font-size: 0.36rem;
-    color: #333;
-}
-
-main .title>div:nth-child(2) {
-    font-size: 0.2rem;
-    color: #aaa;
-    border: 1px solid #d3d3d3;
-    border-radius: 0.2rem 0 0.2rem 0;
-    width: 3.86rem;
-    height: 0.44rem;
-    line-height: 0.44rem;
-    margin: auto;
-    margin-top: 0.17rem;
-    position: relative;
-}
 
 main .m-bottom {
     margin-top: 0.6rem;
@@ -40,15 +19,6 @@ main .m-bottom .title>div:nth-child(2) {
     width: 5.36rem;
 }
 
-main .title .green-line {
-    width: 1.19rem;
-    height: 3px;
-    background-color: #14916a;
-    position: absolute;
-    left: 50%;
-    top: -2px;
-    transform: translate(-50%);
-}
 
 main .m-top>p:nth-child(2) {
     font-size: 0.24rem;

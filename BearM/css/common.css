@@ -77,8 +77,8 @@ header .logo a {
 }
 
 header .icon-gengduo {
-    font-size: 0.28rem;
-    margin: 0.15rem 0.18rem;
+    margin-right: 0.3rem;
+    font-size: 0.48rem;
     position: relative;
     z-index: 5;
 }
@@ -91,8 +91,8 @@ header .icon-gengduo:hover .cha {
 header .cha {
     display: none;
     position: absolute;
-    top: -0.05rem;
-    right: -0.06rem;
+    top: 0.04rem;
+    right: 0.03rem;
     z-index: 2;
     width: 0.41rem;
     height: 0.41rem;
@@ -142,6 +142,39 @@ header .nav a {
 .banner {
     display: block;
     width: 100%;
+}
+
+/* main里的公共样式 */
+main .title {
+    text-align: center;
+}
+
+main .title>div:first-child {
+    font-size: 0.36rem;
+    color: #333;
+}
+
+main .title>div:nth-child(2) {
+    font-size: 0.2rem;
+    color: #aaa;
+    border: 1px solid #d3d3d3;
+    border-radius: 0.2rem 0 0.2rem 0;
+    width: 3.86rem;
+    height: 0.44rem;
+    line-height: 0.44rem;
+    margin: auto;
+    margin-top: 0.17rem;
+    position: relative;
+}
+
+main .title .green-line {
+    width: 1.19rem;
+    height: 3px;
+    background-color: #14916a;
+    position: absolute;
+    left: 50%;
+    top: -2px;
+    transform: translate(-50%);
 }
 
 

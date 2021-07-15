@@ -1,0 +1,81 @@
+.green {
+    color: #14916a;
+}
+
+/* 中间内容区域 */
+main .title {
+    margin-top: 0.56rem;
+}
+
+main .news-title {
+    width: 100%;
+    background-color: #fafafa;
+    padding: 0.21rem 0 0.27rem 0.21rem;
+    overflow: hidden;
+}
+
+main .news-title>p:first-child {
+    font-size: 0.36rem;
+    color: #333;
+    font-weight: bold;
+}
+
+main .news-title>p:last-child {
+    font-size: 0.20rem;
+    color: #333;
+    margin-top: 0.32rem;
+}
+
+main .article {
+    padding: 0 0.21rem;
+}
+
+main .article p {
+    font-size: 0.24rem;
+    margin-top: 0.4rem;
+    color: #333;
+}
+
+main .article>p:nth-of-type(1) {
+    color: #999;
+    margin-top: 0.3rem;
+}
+
+main .article>p:nth-of-type(6) {
+    margin-top: 0.35rem;
+}
+
+main .article img {
+    width: 100%;
+    margin-top: 0.35rem;
+}
+
+main .article .btns {
+    display: flex;
+    width: 7.08rem;
+    height: 0.6rem;
+    background-color: #14916a;
+    color: #fff;
+    font-size: 0.28rem;
+    border-radius: 30px 0 30px 0;
+    line-height: 0.6rem;
+    padding: 0 0.78rem 0 0.38rem;
+    white-space: nowrap;
+}
+
+main .article .line-span {
+    margin-left: 0.14rem;
+    padding-left: 0.19rem;
+    display: inline-block;
+    height: 100%;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+main .article .btn1 {
+    margin-top: 0.79rem;
+}
+
+main .article .btn2 {
+    margin-top: 0.6rem;
+    margin-bottom: 0.71rem;
+}

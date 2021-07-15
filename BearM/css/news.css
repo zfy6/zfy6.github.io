@@ -1,0 +1,65 @@
+main .title {
+    margin-top: 0.5rem;
+}
+
+main .list-news {
+    margin-top: 0.19rem;
+    padding: 0 0.2rem 0 0.2rem;
+}
+
+main .list-news li {
+    display: flex;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 0.2rem;
+    padding: 0.2rem 0.32rem 0.2rem 0;
+}
+
+main .list-news .img-box {
+    width: 1.96rem;
+    height: 1.26rem;
+}
+
+main .list-news .img-box img {
+    width: 1.96rem;
+    height: 1.26rem;
+}
+
+main .list-news .text{
+    margin-left: 0.26rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main .list-news .text>p:first-child{
+    font-size: 0.28rem;
+    color: #333;
+}
+main .list-news .text>p:last-child{
+    font-size: 0.20rem;
+    color: #999;
+}
+
+main .list-news .text .space-16{
+    margin-left: 0.16rem;
+    margin-right: 0.16rem;
+}
+
+main .btns {
+    margin-top: 0.32rem;
+    margin-bottom: 0.34rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0.2rem 0 0.2rem;
+}
+
+main .btns>div{
+    width: 1.72rem;
+    height: 0.6rem;
+    border-radius: 0.3rem 0 0.3rem 0;
+    background-color: #14916a;
+    font-size: 0.28rem;
+    color: #fff;
+    text-align: center;
+    line-height:0.6rem ;
+}
